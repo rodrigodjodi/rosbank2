@@ -14,6 +14,11 @@ export default new Router({
       component: Contas
     },
     {
+      path: "/contas",
+      name: "contas",
+      component: Contas
+    },
+    {
       path: "/login",
       name: "login",
       // route level code-splitting

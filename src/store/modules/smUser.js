@@ -1,6 +1,6 @@
 import firebase from "@firebase/app";
 import "@firebase/auth";
-import { provider } from "../../main";
+import { provider } from "@/main";
 
 const smUser = {
   namespaced: true,
