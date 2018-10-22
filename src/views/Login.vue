@@ -18,16 +18,15 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
   name: "Login",
   data: function() {
-    return {}
+    return {};
   },
   methods: {
     signIn() {
       this.$store.dispatch("smUser/handleSignIn");
     }
   }
-}
+};
 </script>

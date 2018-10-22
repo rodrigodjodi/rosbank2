@@ -8,7 +8,8 @@ import "./registerServiceWorker";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 Vue.config.productionTip = false;
-
+import money from "@/assets/v-money";
+Vue.use(money);
 import firebase from "@firebase/app";
 import "@firebase/auth";
 import "@firebase/firestore";

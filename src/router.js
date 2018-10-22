@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Contas from "./views/Contas.vue";
-
+import Accounts from "./views/Accounts.vue";
+const AccountForm = () => import("@/components/AccountForm");
+const Account = () => import("@/views/Account");
 Vue.use(Router);
 
 export default new Router({
@@ -11,12 +12,20 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Contas
+      component: Accounts
     },
     {
       path: "/contas",
       name: "contas",
-      component: Contas
+      components: { default: Accounts, rightDrawer: AccountForm },
+      meta: { title: "Contas" }
+    },
+    {
+      path: "/contas/:idconta",
+      name: "conta",
+      props: true,
+      components: { default: Account, rightDrawer: AccountForm },
+      meta: { title: "Conta" }
     },
     {
       path: "/login",

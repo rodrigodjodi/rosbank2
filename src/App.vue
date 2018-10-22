@@ -55,9 +55,8 @@
       right
       app
     >
-      
+      <router-view name="rightDrawer" @close="drawerRight = false" />
     </v-navigation-drawer>
-    
     <v-content>
       <router-view/>
     </v-content>
@@ -78,9 +77,7 @@
 import { mapState, mapActions } from "vuex";
 export default {
   name: "App",
-  components: {
-
-  },
+  components: {},
   props: {
     source: String
   },
@@ -89,7 +86,7 @@ export default {
     drawerRight: false,
     right: null,
     left: null,
-    mini: true,
+    mini: true
   }),
   computed: {
     ...mapState({
@@ -98,7 +95,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      signOut: 'smUser/handleSignOut'
+      signOut: "smUser/handleSignOut"
     })
   }
 };
